@@ -377,10 +377,7 @@ def cmd_predict(a: argparse.Namespace) -> int:
                 )
 
         else:
-            print(
-                "No GEMINI_API_KEY configured. "
-                "Continuing without Gemini analysis."
-            )
+            print("No GEMINI_API_KEY configured. Continuing without Gemini analysis.")
             print()
     out = Path(a.out_dir)
 
