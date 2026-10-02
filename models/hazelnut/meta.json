@@ -1,0 +1,24 @@
+{
+  "config": {
+    "backbone": "wide_resnet50_2",
+    "out_indices": [
+      2,
+      3
+    ],
+    "pretrained": true,
+    "image_size": 224,
+    "local_aggregation": 1,
+    "pca_components": 128,
+    "n_train_images": 50,
+    "coreset_ratio": null,
+    "anomaly_patch_ratio": 0.05,
+    "smoothing_sigma": 4.0,
+    "calibration_fraction": 0.2,
+    "threshold_sigma": 3.0,
+    "batch_size": 8,
+    "seed": 42
+  },
+  "threshold": 2385.247024183346,
+  "map_lo": 37.158203125,
+  "map_hi": 3240.252685546875
+}

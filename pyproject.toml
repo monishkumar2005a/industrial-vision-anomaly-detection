@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "industrial-anomaly-detection"
+version = "0.1.0"
+description = "PatchCore-style industrial anomaly detection (Wide-ResNet50 + PCA + FAISS) with calibrated thresholds, localization, and optional LLM inspection reports."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Monish" }]
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.0",
+    "torchvision>=0.15",
+    "timm>=0.9",
+    "faiss-cpu>=1.7.4",
+    "opencv-python-headless>=4.8",
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "scikit-learn>=1.3",
+    "matplotlib>=3.7",
+    "joblib>=1.3",
+    "pillow>=10.0",
+    "tqdm>=4.65",
+]
+
+[project.optional-dependencies]
+llm = ["google-genai>=1.0"]
+serve = ["fastapi>=0.110", "uvicorn>=0.27", "python-multipart>=0.0.9"]
+dev = ["pytest>=8", "httpx>=0.27", "ruff>=0.5", "fastapi>=0.110", "python-multipart>=0.0.9"]
+
+[project.scripts]
+anomaly-detect = "industrial_anomaly.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff.lint.per-file-ignores]
+"src/industrial_anomaly/inspection_report.py" = ["E501"]  # embedded HTML/CSS

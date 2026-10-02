@@ -1,0 +1,28 @@
+{
+  "category": "zipper",
+  "n_good": 32,
+  "n_defect": 119,
+  "image_auroc": 0.9587710084033614,
+  "image_ap": 0.9873942392117959,
+  "pixel_auroc": 0.9754822234797551,
+  "threshold": 1007.6307958148846,
+  "tn": 25,
+  "fp": 7,
+  "fn": 5,
+  "tp": 114,
+  "precision": 0.9421487603305785,
+  "recall": 0.957983193277311,
+  "f1": 0.95,
+  "false_alarm_rate": 0.21875,
+  "miss_rate": 0.04201680672268908,
+  "mean_score_by_type": {
+    "broken_teeth": 1398.1148810135692,
+    "combined": 1793.1635513305664,
+    "fabric_border": 2100.7084314682907,
+    "fabric_interior": 1284.947093963623,
+    "good": 894.7476921081543,
+    "rough": 1519.2081227022059,
+    "split_teeth": 1534.7639770507812,
+    "squeezed_teeth": 1379.7705001831055
+  }
+}

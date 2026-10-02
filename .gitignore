@@ -1,0 +1,50 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build / packaging
+build/
+dist/
+*.egg-info/
+
+# Logs / temporary files
+*.log
+*.tmp
+*.temp
+
+# Generated inspection reports
+reports/inspection/
+
+# Generated benchmark outputs
+outputs/benchmark/
+
+# Generated reports
+reports/*.html
+
+# Local datasets
+mvtec_anomaly_detection/

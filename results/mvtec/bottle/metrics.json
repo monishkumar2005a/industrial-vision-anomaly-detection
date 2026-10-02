@@ -1,0 +1,24 @@
+{
+  "category": "bottle",
+  "n_good": 20,
+  "n_defect": 63,
+  "image_auroc": 1.0,
+  "image_ap": 0.9999999999999998,
+  "pixel_auroc": 0.982722952175291,
+  "threshold": 1341.442205719746,
+  "tn": 20,
+  "fp": 0,
+  "fn": 1,
+  "tp": 62,
+  "precision": 1.0,
+  "recall": 0.9841269841269841,
+  "f1": 0.9919999999999999,
+  "false_alarm_rate": 0.0,
+  "miss_rate": 0.015873015873015872,
+  "mean_score_by_type": {
+    "broken_large": 3379.790319824219,
+    "broken_small": 2659.8839610706677,
+    "contamination": 2441.413062686012,
+    "good": 941.0313232421875
+  }
+}

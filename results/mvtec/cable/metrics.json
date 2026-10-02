@@ -1,0 +1,29 @@
+{
+  "category": "cable",
+  "n_good": 58,
+  "n_defect": 92,
+  "image_auroc": 0.9761994002998501,
+  "image_ap": 0.9840639179223514,
+  "pixel_auroc": 0.9705840763478963,
+  "threshold": 2628.264414712283,
+  "tn": 56,
+  "fp": 2,
+  "fn": 15,
+  "tp": 77,
+  "precision": 0.9746835443037974,
+  "recall": 0.8369565217391305,
+  "f1": 0.9005847953216375,
+  "false_alarm_rate": 0.034482758620689655,
+  "miss_rate": 0.16304347826086957,
+  "mean_score_by_type": {
+    "bent_wire": 3850.1255821814902,
+    "cable_swap": 2636.3547159830728,
+    "combined": 3336.994207208807,
+    "cut_inner_insulation": 3157.5418701171875,
+    "cut_outer_insulation": 2843.1720703125,
+    "good": 2310.629529229526,
+    "missing_cable": 3116.3110555013022,
+    "missing_wire": 2732.0350341796875,
+    "poke_insulation": 2602.77578125
+  }
+}

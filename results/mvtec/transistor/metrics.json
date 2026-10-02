@@ -1,0 +1,25 @@
+{
+  "category": "transistor",
+  "n_good": 60,
+  "n_defect": 40,
+  "image_auroc": 0.9625,
+  "image_ap": 0.9635028613112536,
+  "pixel_auroc": 0.9018859612762536,
+  "threshold": 2351.8700296833968,
+  "tn": 60,
+  "fp": 0,
+  "fn": 10,
+  "tp": 30,
+  "precision": 1.0,
+  "recall": 0.75,
+  "f1": 0.8571428571428571,
+  "false_alarm_rate": 0.0,
+  "miss_rate": 0.25,
+  "mean_score_by_type": {
+    "bent_lead": 2974.88828125,
+    "cut_lead": 2447.8618408203124,
+    "damaged_case": 2532.775048828125,
+    "good": 1937.0886494954427,
+    "misplaced": 3288.2980346679688
+  }
+}
