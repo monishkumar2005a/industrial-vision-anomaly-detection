@@ -56,15 +56,12 @@ def list_images(directory: str | Path) -> list[Path]:
         return []
 
     if not directory.is_dir():
-        raise FileNotFoundError(
-            f"Directory not found: {directory}"
-        )
+        raise FileNotFoundError(f"Directory not found: {directory}")
 
     return sorted(
         path
         for path in directory.rglob("*")
-        if path.is_file()
-        and path.suffix.lower() in IMAGE_EXTENSIONS
+        if path.is_file() and path.suffix.lower() in IMAGE_EXTENSIONS
     )
 
 
@@ -77,9 +74,7 @@ def load_rgb(path: str | Path) -> np.ndarray:
     )
 
     if bgr is None:
-        raise ValueError(
-            f"Could not read image: {path}"
-        )
+        raise ValueError(f"Could not read image: {path}")
 
     return cv2.cvtColor(
         bgr,
@@ -101,16 +96,11 @@ def iter_batches(
         len(paths),
         batch_size,
     ):
-        chunk = paths[
-            i : i + batch_size
-        ]
+        chunk = paths[i : i + batch_size]
 
         yield (
             chunk,
-            [
-                load_rgb(path)
-                for path in chunk
-            ],
+            [load_rgb(path) for path in chunk],
         )
 
 
@@ -139,11 +129,7 @@ def load_mask(
     Returns None if there isn't one.
     """
 
-    mask_path = (
-        gt_dir
-        / defect
-        / f"{image_path.stem}_mask.png"
-    )
+    mask_path = gt_dir / defect / f"{image_path.stem}_mask.png"
 
     if not mask_path.exists():
         return None
@@ -153,8 +139,4 @@ def load_mask(
         cv2.IMREAD_GRAYSCALE,
     )
 
-    return (
-        None
-        if mask is None
-        else (mask > 0).astype(np.uint8)
-    )
+    return None if mask is None else (mask > 0).astype(np.uint8)

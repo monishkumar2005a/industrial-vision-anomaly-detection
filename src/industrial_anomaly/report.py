@@ -100,9 +100,7 @@ class GeminiReporter:
             )
             time.sleep(wait)
 
-        raise ReportError(
-            f"Gemini report failed after {self.max_retries} attempts: {last}"
-        )
+        raise ReportError(f"Gemini report failed after {self.max_retries} attempts: {last}")
 
     def generate_benchmark_summary(self, summary: str) -> str:
         """Generate an AI interpretation of benchmark metrics."""
